@@ -1,6 +1,13 @@
     body{
         background: #f8f8f8;
     }
+
+    .name{
+        font-family: Didot;
+        font-size: 20px;
+        font-weight: 800;
+        text-align: center;
+    }
     .logo{
        margin: auto;
         display: block;
@@ -11,8 +18,8 @@
 
     .img_intro {
         display: grid;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(1,1fr);
         gap: 2px;
         margin: 0;
     }
@@ -31,10 +38,10 @@
     }
 
     .dog {
-        grid-area: 2 / 2 / 3 / 3;
+        grid-area: 3 / 2 / 2 / 3;
     }
     .text{
-        grid-area: 1/4/2/5 ;
+        grid-area: 3/2/2/3 ;
     }
 
     .toggle_bttn {
@@ -79,4 +86,9 @@
 
     #toggle:checked + .checkbox {
         background: #33383c;
+    }
+    .hire{
+        background-color: #33383c;
+        border: none;
+        color: white;
     }
