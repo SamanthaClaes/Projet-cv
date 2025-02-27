@@ -1,127 +1,161 @@
-    body{
-        background: #f8f8f8;
-    }
-    .logo{
-        margin: auto;
-        display: block;
-    }
-    .description{
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .name{
-        font-family: Didot;
-        font-size: 32px;
-        font-weight: 352;
-        text-align: center;
-        line-height: 42px;
-        padding-top: 120px;
-
-    }
-    .accroche{
-        font-family: poppins;
-        font-size: 14px;
-        font-weight: 400;
-        line-height: 17px;
-        text-align: center;
-    }
-
-    .hire_btn{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        margin-top: 130px;
-    }
-    .hire{
-        font-family: poppins;
-        font-size: 14px;
-        font-weight: 500;
-        background-color: #33383c;
-        border: none;
-        color: white;
-        padding: 12px;
-        border-radius: 8px;
-        width: 406px;
-        height: 48px;
-        text-align: center;
-    }
-
-    .change_color{
-        background: white;
-    }
-
-    .img_intro {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(2,1fr);
-        gap: 2px;
-        margin: 0;
-    }
+body {
+    background: #f8f8f8;
+}
+.skills{
+    font-family: Didot;
+    font-size: 24px;
+    font-weight: 352;
+    text-align: center;
+}
 
 
-    figure {
-        margin: 0;
-    }
+.logo {
+    margin: auto;
+    display: block;
+}
 
-    .me {
-        grid-area: 1 / 1 / 2 / 3;
-        max-width: 869px;
-        display: block;
-    }
+.description {
+    padding-left: 20px;
+    padding-right: 20px;
 
-    .rome {
-        grid-area: 2 / 1 / 3 / 2;
-    }
+}
 
-    .dog {
-        grid-area: 3 / 2 / 2 / 3;
-    }
-    .text{
-        grid-area: 1/3/3/4 ;
-    }
+.div_flex{
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+.div_des{
+    align-self: start;
+}
 
-    .toggle_bttn {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        max-width: 400px;
-        gap: 10px;
-    }
 
-    #toggle {
-        display: none;
-    }
+.name {
+    font-family: Didot;
+    font-size: 32px;
+    font-weight: 352;
+    text-align: center;
+    line-height: 42px;
+    padding-top: 120px;
+    grid-area: 1/1/2/3;
 
-    .checkbox {
-        display: inline-block;
-        width: 50px;
-        height: 25px;
-        background-color: lightgrey;
-        position: relative;
-        color: red;
-        transition: all 1s;
-        border-radius: 60px;
-        cursor: pointer;
-    }
+}
 
-    .checkbox:after {
-        content: "";
-        height: 15px;
-        width: 15px;
-        background-color: white;
-        position: absolute;
-        top: 5px;
-        left: 6px;
-        transition: all 1s;
-        border-radius: 50%;
-    }
+.accroche {
+    font-family: poppins;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: center;
+}
 
-    #toggle:checked + .checkbox:after {
-        transform: translateX(24px);
-    }
+.hire_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+    padding:40px;
+}
 
-    #toggle:checked + .checkbox {
-        background: #33383c;
-    }
+.hire , .form_btn{
+    font-family: poppins;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #33383c;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 406px;
+    height: 48px;
+    text-align: center;
+}
+.form_btn{
+    width:90px;
+    height: 48px;
+
+}
+
+.change_color {
+    background: white;
+}
+
+.img_intro {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2px;
+    margin: 0;
+}
+
+
+
+.me {
+    grid-area: 1 / 1 / 2 / 3;
+    max-width: 869px;
+    display: block;
+}
+
+.rome {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.dog {
+    grid-area: 3 / 2 / 2 / 3;
+}
+
+.text {
+    grid-area: 1/3/3/4;
+}
+
+
+.toggle_bttn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    gap: 10px;
+}
+
+#toggle {
+    display: none;
+}
+.contact{
+    font-family: Didot;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.checkbox {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: lightgrey;
+    position: relative;
+    transition: all 1s;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.checkbox:after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    transition: all 1s;
+    border-radius: 50%;
+}
+
+#toggle:checked + .checkbox:after {
+    transform: translateX(24px);
+}
+
+#toggle:checked + .checkbox {
+    background: #33383c;
+}
+
+

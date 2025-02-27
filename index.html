@@ -9,13 +9,13 @@
 <body>
 <header>
     <figure>
-    <img class="logo" src="img/logo-cv.svg" alt="mon logo créer pour le projet" width="105" height="32">
+        <img class="logo" src="img/logo-cv.svg" alt="mon logo créer pour le projet" width="105" height="32">
     </figure>
 </header>
 <div class="img_intro">
     <div class="me">
         <figure>
-            <img  src="img/me_cv.jpg" class="item"
+            <img src="img/me_cv.jpg" class="item"
                  alt="photo de moi pour mon projet cv sur un fond gris très clair">
         </figure>
     </div>
@@ -30,58 +30,60 @@
         </figure>
     </div>
 
+
 <section class="description">
     <h1 class="name text">
         Claes Samantha
     </h1>
-    <p class="accroche">Dynamique, motivée et prête à m’investir. Polyvalente et toujours partante pour relever de nouveaux défis, je
-        suis déterminée à contribuer à vos projets avec sérieux et enthousiasme.</p>
-<div class="hire_btn">
-<button class="hire">Embauchez moi</button>
-</div>
+    <p class="accroche">Dynamique, motivée et prête à m’investir. Polyvalente et toujours partante pour relever de
+        nouveaux défis, je suis déterminée à contribuer à vos projets avec sérieux et enthousiasme.</p>
+    <div class="hire_btn">
+        <button class="hire">Embauchez moi</button>
+    </div>
 
+<div class="div_flex">
+    <div class="div_des">Description</div>
+    <ul>
+        <li>
+            <p>Je m’appelle Samantha, j’ai 25 ans et je suis passionnée par le design et l’esthétique sous
+                toutes ses
+                formes. Curieuse et créative, j’aime apprendre de nouvelles choses et relever des défis.
+                Organisée et
+                persévérante, je cherche à évoluer dans un environnement où je peux allier passion et
+                professionnalisme. </p>
+        </li>
+    </ul>
+
+    <div class="div_des">
+        Formations
+    </div>
+
+    <ul>
+        <li>2012-2019 : Athénée Provincial de Flémalle CESS comptabilité et gestion</li>
+        <li>2019-2020 : Bac 1 psychologie à l'Université de Liège</li>
+        <li>2023-aujourd'hui : Etudiante en Techniques Graphiques à la Haute Ecole De La Province De Liège</li>
+    </ul>
+
+    <div class="div_des">Expériences</div>
+
+    <ul>
+        <li>Aout-septembre 2019 : Carrefour de Flémalle, réassortiment de rayons, conseil aux clients</li>
+        <li>Septembre 2022 : Bureau d'expertise CED, tâches d'archivages, tâches administratives mais également
+            création
+            de
+            bilan d'expertise
+        </li>
+        <li>Mai à aout 2023 : Bureau d'Avocats Delfosse, tâches d'archivages, de classement, de secrétariat</li>
+    </ul>
+</div>
 </section>
 </div>
-<div>
-    <span>Description</span>
-</div>
-<div class="parcours">
-<ul>
-    <li>
-        <p>Je m’appelle Samantha, j’ai 25 ans et je suis passionnée par le design et l’esthétique sous toutes ses
-            formes. Curieuse et créative, j’aime apprendre de nouvelles choses et relever des défis. Organisée et
-            persévérante, je cherche à évoluer dans un environnement où je peux allier passion et
-            professionnalisme. </p>
-    </li>
-</ul>
-
-    <span>
-        Formations
-    </span>
-
-<ul>
-    <li>2012-2019 : Athénée Provincial de Flémalle CESS comptabilité et gestion</li>
-    <li>2019-2020 : Bac 1 psychologie à l'Université de Liège</li>
-    <li>2023-aujourd'hui : Etudiante en Techniques Graphiques à la Haute Ecole De La Province De Liège</li>
-</ul>
-
-    <span>Expériences</span>
-
-<ul>
-    <li>Aout-septembre 2019 : Carrefour de Flémalle, réassortiment de rayons, conseil aux clients</li>
-    <li>Septembre 2022 : Bureau d'expertise CED, tâches d'archivages, tâches administratives mais également création de
-        bilan d'expertise
-    </li>
-    <li>Mai à aout 2023 : Bureau d'Avocats Delfosse, tâches d'archivages, de classement, de secrétariat</li>
-</ul>
-</div>
-
 
 <section>
-    <h2>Compétences</h2>
+    <h2 class="skills">Compétences</h2>
 </section>
-<figure class="adobe"><img src="" alt="logo de la suite Adobe" width="235" height="68"></figure>
-<figure class="figma"><img src="" alt="logo de Figma"></figure>
+<img  class="adobe" src="./img/logo_adobe%20copie.jpg" alt="logo de la suite Adobe">
+<img class="figma" src="" alt="logo de Figma">
 <ul class="quality">
     <li>
         <span>Esprit d'équipe</span>
@@ -100,7 +102,7 @@
 </ul>
 <form class="change_color" action="#" method="get">
     <fieldset>
-        <legend>Me contacter</legend>
+        <legend class="contact">Me contacter</legend>
         <div>
             <label for="name"></label>
             <input type="text" id="name" name="name" placeholder="Ecrivez votre nom ici">
@@ -115,13 +117,13 @@
         </div>
     </fieldset>
     <fieldset>
-        <legend>
+        <legend class="msg">
             Ecrivez votre message ci dessous
         </legend>
         <label for="message"></label>
         <textarea name="message" id="message" cols="50" rows="10"></textarea>
     </fieldset>
-    <button type="submit"> Confirmer</button>
+    <button class="form_btn" type="submit"> Confirmer</button>
 </form>
 <div class="change_color">
     <span>accessibilité : meilleur contraste</span>
@@ -168,10 +170,10 @@
         <a href="">Instagram</a>
     </div>
     <div>
-    <figure>
-    <img class="logo" src="./img/logo-cv.svg" alt="logo créer pour le projet" width="447" height="26">
-    </figure>
-    <span id="lang" >Choisissez votre pays et votre région et votre langue Belgique (français)</span>
+        <figure>
+            <img class="logo" src="./img/logo-cv.svg" alt="logo créer pour le projet" width="447" height="26">
+        </figure>
+        <span id="lang">Choisissez votre pays et votre région et votre langue Belgique (français)</span>
     </div>
 </footer>
 </body>
