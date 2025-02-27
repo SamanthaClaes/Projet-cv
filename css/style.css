@@ -7,7 +7,12 @@ body {
     font-weight: 352;
     text-align: center;
 }
-
+.adobe{
+    margin: auto;
+}
+.langage{
+    margin: auto;
+}
 
 .logo {
     margin: auto;
@@ -20,13 +25,25 @@ body {
 
 }
 
-.div_flex{
+.div_flex {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 10px;
 }
-.div_des{
-    align-self: start;
+
+.div_des {
+flex: 1;
+}
+
+.div_des ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+.div_des ul li {
+    margin: 5px 0;
 }
 
 
@@ -157,5 +174,3 @@ body {
 #toggle:checked + .checkbox {
     background: #33383c;
 }
-
-
