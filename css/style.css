@@ -1,17 +1,58 @@
 body {
     background: #f8f8f8;
 }
-.skills{
+
+.skills {
     font-family: Didot;
     font-size: 24px;
     font-weight: 352;
     text-align: center;
+    padding-bottom: 32px;
 }
-.adobe{
-    margin: auto;
+
+.img_flex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 0;
 }
-.langage{
-    margin: auto;
+
+/* les 3 liens en direction row avant le footer*/
+.quality {
+    padding: 12px 32px 12px 0;
+}
+.ul_quality {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px;
+
+}
+
+.link_flex {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    text-decoration: none;
+}
+
+/*image 1 des compétences*/
+.adobe {
+    grid-area: 1/2/2/3;
+}
+
+/*image 2 des compétences*/
+.langage {
+    grid-area: 1/3/2/4;
+}
+
+.div_ul_flex {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 32px;
 }
 
 .logo {
@@ -22,7 +63,6 @@ body {
 .description {
     padding-left: 20px;
     padding-right: 20px;
-
 }
 
 .div_flex {
@@ -32,18 +72,51 @@ body {
     gap: 10px;
 }
 
-.div_des {
-flex: 1;
+.div_flex {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
-.div_des ul {
-    margin: 0;
-    padding: 0;
+/*étendre le texte de la description en dessous des boutons*/
+.decription_me {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/*étendre tous les textes*/
+.ul_flex {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.section {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    gap: 10px;
+}
+
+.ul_flex {
+
     list-style-type: none;
 }
 
-.div_des ul li {
+.ul_flex li {
     margin: 5px 0;
+}
+
+.div_des {
+    flex: 1;
+    background: none;
+    border: none;
+}
+
+.div_des ul {
+
+    list-style-type: none;
 }
 
 
@@ -66,16 +139,18 @@ flex: 1;
     text-align: center;
 }
 
+/*bouton embauchez-moi*/
 .hire_btn {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 130px;
-    padding:40px;
+    padding: 40px;
 }
 
-.hire , .form_btn{
+/*bouton embauchez-moi*/
+.hire, .form_btn {
     font-family: poppins;
     font-size: 14px;
     font-weight: 500;
@@ -88,8 +163,10 @@ flex: 1;
     height: 48px;
     text-align: center;
 }
-.form_btn{
-    width:90px;
+
+/*bouton du formulaire "confirmer"*/
+.form_btn {
+    width: 90px;
     height: 48px;
 
 }
@@ -105,7 +182,6 @@ flex: 1;
     gap: 2px;
     margin: 0;
 }
-
 
 
 .me {
@@ -126,7 +202,7 @@ flex: 1;
     grid-area: 1/3/3/4;
 }
 
-
+/*boutton d'accessibilité*/
 .toggle_bttn {
     display: flex;
     align-items: center;
@@ -138,12 +214,15 @@ flex: 1;
 #toggle {
     display: none;
 }
-.contact{
+
+/*Légend du formulaire*/
+.contact {
     font-family: Didot;
     font-size: 20px;
     font-weight: 800;
 }
 
+/*bouton accessibilité*/
 .checkbox {
     display: inline-block;
     width: 50px;
@@ -155,6 +234,7 @@ flex: 1;
     cursor: pointer;
 }
 
+/*bouton accessibilité*/
 .checkbox:after {
     content: "";
     height: 15px;
@@ -167,10 +247,13 @@ flex: 1;
     border-radius: 50%;
 }
 
+/*bouton accessibilité*/
 #toggle:checked + .checkbox:after {
     transform: translateX(24px);
 }
 
+/*bouton accessibilité*/
 #toggle:checked + .checkbox {
     background: #33383c;
 }
+
