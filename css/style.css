@@ -12,11 +12,12 @@ body {
     padding: 120px 0 120px 0;
 }
 
-/* les 3 liens en direction row avant le footer*/
+/* les items de ul.quality*/
 .quality {
     padding: 12px 32px 12px 0;
 }
 
+/*Début des 3 colonnes sous les images des compétences pour faire des flex*/
 .ul_quality {
     display: flex;
     align-items: center;
@@ -44,7 +45,7 @@ body {
     margin: 0 auto 48px auto;
     line-height: 4;
 }
-
+/*enlever la décoration des liens à cotés des images*/
 .clear_deco {
     color: black;
     text-decoration: underline;
@@ -75,6 +76,28 @@ body {
     padding-top: 32px;
 }
 
+.img_intro {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+.me {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.dog {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.rome {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+
 .logo {
     margin: auto;
     display: block;
@@ -90,12 +113,6 @@ body {
     flex-direction: row;
     align-items: flex-start;
     gap: 10px;
-}
-
-.div_flex {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
 }
 
 /*étendre le texte de la description en dessous des boutons*/
@@ -121,34 +138,12 @@ body {
     margin: 5px 0;
 }
 
-.div_description {
-    grid-area: 1 / 1 / 2 / 2;
-    background: none;
-    border: none;
-}
-
-.div_formation {
-    grid-area: 1 / 2 / 2 / 3;
-    background: none;
-    border: none;
-}
-
-.div_experiences {
-    background: none;
-    border: none;
-}
-
-.description_me {
-    grid-area: 2 / 1 / 3 / 2;
-}
-
 .div_des ul {
-
     list-style-type: none;
 }
 
 
-.name {
+.name_h1 {
     font-family: Didot, sans-serif;
     font-size: 32px;
     font-weight: 352;
@@ -203,42 +198,22 @@ body {
     background: white;
 }
 
-.img_intro {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 2px;
-    margin: 0;
-    padding: 0;
-}
 
 figure {
     margin: 0;
     padding: 0;
 }
 
+.name_grid {
 
-.me {
-    grid-area: 1 / 1 / 2 / 3;
-    max-width: 869px;
-    display: block;
 }
 
-.rome {
-    grid-area: 2 / 1 / 3 / 2;
+.accroche {
+
 }
 
-.dog {
-    grid-area: 3 / 2 / 2 / 3;
-}
-
-.me, .dog.rome {
-    padding: 0;
-    margin: 0;
-}
-
-.text {
-    grid-area: 1/3/3/4;
+.ul_link {
+    grid-area: 3 / 2 / 4 / 3
 }
 
 .skills {
@@ -305,13 +280,7 @@ figure {
 }
 
 . /* Style général */
-body {
-    font-family: Arial, sans-serif;
-    color: #333;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
-}
+
 
 /*Styliser les colonnes d'en dessous*/
 
@@ -335,7 +304,7 @@ body {
 
 }
 
-.info_perso_flex{
+.info_perso_flex {
     align-self: flex-start;
 }
 

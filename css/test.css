@@ -1,0 +1,480 @@
+
+body {
+    background: #f8f8f8;
+}
+
+/*Stylisation de mon logo*/
+.logo {
+    margin: auto;
+    display: block;
+}
+
+
+/* image en grid sur le début du site*/
+.img_intro {
+    width: 60%;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
+}
+
+.me {
+    grid-area: 1 / 1 / 2 / 3;
+}
+
+.rome {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.dog {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+
+/*Fin des images en grid au début du site*/
+
+/*Début du bloc de texte qui se trouve à droite des photos en grid au début du site*/
+
+.name_h1 {
+    font-family: Didot, sans-serif;
+    font-size: 32px;
+    font-weight: 352;
+    text-align: center;
+    line-height: 42px;
+    padding-top: 120px;
+    grid-area: 1/1/2/3;
+}
+.encapsuled{
+    display: grid;
+    width: 40%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, auto);
+}
+
+.accroche {
+    font-family: "Roboto Light" ,serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 17px;
+    text-align: center;
+}
+
+.hire_btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 130px;
+    padding: 40px;
+}
+
+/*Stylisation du bouton "embauchez-moi" et du bouton du formulaire*/
+.hire, .form_btn {
+    font-family: "Roboto Light" ,serif;
+    font-size: 14px;
+    font-weight: 500;
+    background-color: #33383c;
+    border: none;
+    color: white;
+    padding: 12px;
+    border-radius: 8px;
+    width: 406px;
+    height: 48px;
+    text-align: center;
+}
+
+.description_head{
+    margin: 0 auto 48px auto;
+    padding: 0 20px 0 20px;
+}
+.button_description_flex{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    border-bottom: 1px solid lightgrey;
+}
+#button_description,#button_formation, #button_experience {
+    border: none;
+    background: none;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 14px;
+    font-weight: 352;
+    padding-bottom: 8px;
+}
+#button_description2{
+    border: none;
+    background: none;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 14px;
+    font-weight: 352;
+    padding-bottom: 8px;
+}
+
+.tiny_text_js, #hidden {
+    padding:0 20px 0 20px;
+    margin: 0 auto 48px 0;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+}
+p[itemprop='name']{
+    padding:0 20px 0 20px;
+    margin: 0 auto 48px 0;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 16px;
+    font-weight: 200;
+}
+/*texte caché avec le bouton voir plus*/
+.hidden_text{
+    display: none;
+    border-bottom: solid 1px lightgrey;
+}
+/* Style de la modale */
+.modal {
+    display: none; /* Masque la modale par défaut */
+    position: fixed;
+    top: 0;
+    right: -100%; /* Déplace la modale hors de l'écran à droite */
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    transition: right 0.3s ease-in-out; /* Animation pour l'ouverture */
+    z-index: 1000;
+}
+.modal-content {
+    padding: 20px;
+    position: relative;
+    max-height: 100vh; /* Hauteur maximale de la modale */
+    overflow-y: auto; /* Active le scroll vertical si nécessaire */
+
+}
+/* Bouton de fermeture */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.overlay {
+    display: none; /* Masqué par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+    backdrop-filter: blur(5px); /* Applique un flou au fond */
+    z-index: 999; /* Place l'overlay sous la modale */
+}
+
+
+/*Fin du bloc de texte qui se trouve à droite des photos en gris au début du site*/
+
+/* Début des images de mes compétences (Adobe, et les logos des languages de programmation + figma*/
+
+.skills {
+    font-family: Didot, sans-serif;
+    font-size: 24px;
+    font-weight: 352;
+    text-align: center;
+    padding-bottom: 32px;
+}
+
+.img_flex {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+    padding: 120px 0 120px 0;
+}
+
+/*image 1 des compétences*/
+.adobe {
+    grid-area: 1/2/2/3;
+}
+
+/*image 2 des compétences*/
+.langage {
+    grid-area: 1/3/2/4;
+}
+
+/*Fin des images des compétences en grid*/
+
+/*Début des 3 colonnes sous les images des compétences pour faire des flex*/
+.ul_quality {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 32px;
+
+}
+
+/* les items de ul.quality*/
+.quality {
+    padding: 12px 32px 12px 0;
+}
+
+/*stylisation des liens/spans enfant de ul.quality*/
+.link_flex {
+    display: grid;
+    align-items: center;
+    justify-content: space-between;
+    color: black;
+    text-decoration: none;
+    font-weight: 400;
+    font-family: "Roboto Light"
+    , sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+/*titre*/
+.team, .creative, .determine {
+    font-weight: 400;
+    font-family: "Roboto Light", sans-serif;
+    text-align: left;
+    margin-bottom: 4px;
+}
+
+/*Fin des 3 colonnes sous les images des compétences pour faire des flex*/
+
+/*Début du formulaire*/
+#contact {
+    margin-bottom: 24px;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+#name, #surname, #email {
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 16px;
+    width: 416px;
+    height: 16px;
+    margin-bottom: 12px;
+    box-sizing: border-box;
+}
+
+.form_label {
+    width: 100%;
+}
+
+form.change_color {
+    width: 100%;
+    max-width: 400px; /* Largeur maximale du formulaire */
+    padding: 15px; /* Réduit le padding */
+    background: white;
+}
+
+/* Style des fieldset */
+form.change_color fieldset {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 15px; /* Réduit le padding */
+    margin-bottom: 15px; /* Réduit la marge en bas */
+}
+
+/* Style des légendes */
+form.change_color legend {
+    font-family: Didot, serif;
+    font-size: 18px; /* Réduit la taille de la police */
+    font-weight: bold;
+    padding: 0 8px; /* Réduit le padding */
+}
+
+/* Style des groupes de champs (label + input) */
+form.change_color div {
+    margin-bottom: 10px; /* Réduit l'espace entre les groupes de champs */
+}
+
+/* Style des labels */
+form.change_color .form_label {
+    display: inline-block;
+    width: 100px; /* Largeur fixe pour les labels */
+    vertical-align: middle; /* Alignement vertical au milieu */
+    margin-bottom: 5px; /* Réduit l'espace en dessous du label */
+}
+
+/* Style des inputs */
+form.change_color input[type="text"],
+form.change_color input[type="email"],
+form.change_color textarea {
+    display: inline-block;
+    width: calc(100% - 110px);
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 14px;
+    padding: 6px;
+    margin-bottom: 5px;
+}
+
+/* Style du textarea */
+form.change_color textarea {
+    height: 80px;
+    resize: vertical;
+}
+
+/* Style du bouton de soumission */
+form.change_color .form_btn {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #33383c;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: "Roboto Light", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+
+/*Fin du formulaire*/
+
+/* début du bouton accessibilité*/
+
+.checkbox {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: lightgrey;
+    position: relative;
+    transition: all 1s;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.checkbox:after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    transition: all 1s;
+    border-radius: 50%;
+}
+.toggle_bttn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    gap: 10px;
+}
+
+#toggle {
+    display: none;
+}
+
+
+#toggle:checked + .checkbox:after {
+    transform: translateX(24px);
+}
+#toggle:checked + .checkbox {
+    background: #33383c;
+}
+
+/*Fin du bouton d'accessibilité*/
+
+
+/*stylisation qui concerne le footer*/
+.change_color {
+    background: white;
+}
+footer {
+    padding: 32px;
+}
+
+
+/*Container des listes en flex*/
+.container_footer_grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin-bottom: 48px;
+}
+
+/*Enfant du container*/
+.footer_grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+
+}
+
+.info_perso_flex {
+    align-self: flex-start;
+}
+
+h2 {
+    font-size: 16px;
+    font-family: Didot, serif;
+    color: #000;
+    margin-bottom: 40px;
+    padding-bottom: 5px;
+}
+
+ul.info {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto Light", sans-serif;
+}
+
+ul.info li {
+    font-size: 14px;
+    color: #555;
+    margin-bottom: 8px;
+}
+
+ul.info li[itemprop="knowsAbout"] {
+    position: relative;
+}
+
+ul.info li[itemprop="knowsAbout"]::before {
+    content: "";
+    color: #000;
+    position: absolute;
+    left: 0;
+}
+
+/*3 derniers éléments du footer*/
+.grid_div_footer {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    place-items: center;
+}
+
+#follow {
+    grid-area: 1 / 1 / 2 / 4;
+    display: flex;
+    gap: 2px;
+    justify-self: center;
+}
+
+#logo_footer {
+    grid-area: 1 / 6 / 2 / 8;
+    justify-self: center;
+}
+
+#lang {
+    grid-area: 1 / 8 / 2 / 13;
+    display: flex;
+    justify-self: center;
+}
+
+/*Fin de stylisation du footer*/
