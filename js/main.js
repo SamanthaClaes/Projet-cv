@@ -12,9 +12,9 @@ const descButton = document.getElementById('button_description');
 
 
 formationButton.addEventListener('click', () => {
-    tinytext.hidden = true;
-    expText.hidden = true;
-    formationText.hidden = false;
+    tinytext.classList.add('hidden')
+    expText.classList.add('hidden')
+    formationText.classList.remove('hidden')
 })
 expButton.addEventListener('click', () => {
     tinytext.hidden = true;

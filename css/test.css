@@ -185,10 +185,13 @@ p[itemprop='name']{
     z-index: 999; /* Place l'overlay sous la modale */
 }
 
-
 /*Fin du bloc de texte qui se trouve à droite des photos en gris au début du site*/
 
 /* Début des images de mes compétences (Adobe, et les logos des languages de programmation + figma*/
+
+.sct_skills{
+    padding: 120px 0 120px 0;
+}
 
 .skills {
     font-family: Didot, sans-serif;
@@ -201,10 +204,10 @@ p[itemprop='name']{
 .img_flex {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
     justify-content: center;
     align-items: center;
     gap: 0;
-    padding: 120px 0 120px 0;
 }
 
 /*image 1 des compétences*/
@@ -215,6 +218,22 @@ p[itemprop='name']{
 /*image 2 des compétences*/
 .langage {
     grid-area: 1/3/2/4;
+}
+.suite_adobe{
+    grid-area: 2/2/3/3;
+    text-align: center;
+}
+.lg_fig{
+    grid-area: 2/3/3/4;
+    text-align: center;
+}
+.item1{
+    grid-area:  3 / 2 / 4 / 3;
+    text-align: center;
+}
+.item2{
+    grid-area:  3 / 3 / 4 / 4;
+    text-align: center;
 }
 
 /*Fin des images des compétences en grid*/
