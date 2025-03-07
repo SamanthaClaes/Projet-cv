@@ -150,6 +150,21 @@ p[itemprop='name']{
     overflow-y: auto; /* Active le scroll vertical si nécessaire */
 
 }
+.hidden{
+    display: none;
+}
+
+.modal-content-section {
+    display: none; /* Masquer toutes les sections par défaut */
+}
+
+.modal-content-section.hidden {
+    display: none; /* Masquer les sections avec la classe hidden */
+}
+
+.modal-content-section:not(.hidden) {
+    display: block; /* Afficher les sections sans la classe hidden */
+}
 /* Bouton de fermeture */
 .close-btn {
     position: absolute;

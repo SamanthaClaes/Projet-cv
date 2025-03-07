@@ -3,6 +3,30 @@ const overlayElement = document.getElementById('overlay');
 const modalElement = document.getElementById('modal');
 const closeModalBtn = document.getElementById('close-modal-btn');
 const hideText = document.getElementById('hidden');
+const formationButton = document.getElementById('button_formation');
+const tinytext = document.getElementById('tiny_text_test');
+const expText = document.getElementById('exp_text');
+const formationText = document.getElementById('formation_text');
+const expButton = document.getElementById('button_experience')
+const descButton = document.getElementById('button_description');
+
+
+formationButton.addEventListener('click', () => {
+    tinytext.hidden = true;
+    expText.hidden = true;
+    formationText.hidden = false;
+})
+expButton.addEventListener('click', () => {
+    tinytext.hidden = true;
+    expText.hidden = false;
+    formationText.hidden = true;
+})
+descButton.addEventListener('click', () => {
+    tinytext.hidden = false;
+    expText.hidden = true;
+    formationText.hidden = true;
+})
+
 
 
 buttonShowMore.addEventListener('click', () => {
