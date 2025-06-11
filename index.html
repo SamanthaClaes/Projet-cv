@@ -11,147 +11,145 @@
 </head>
 <body>
 <header>
-    <figure>
-        <img class="logo" src="img/logo-cv.svg" alt="Logo de mon CV" width="105" height="32">
-    </figure>
+    <div class="img_container">
+        <figure>
+            <img class="logo" src="img/logo-cv.svg" alt="Logo de mon CV" width="105" height="32">
+        </figure>
+    </div>
 </header>
 <div class="encapsuled">
-    <div class="img_intro">
-        <div class="me">
-            <figure>
-                <img src="img/me_cv.jpg" class="item" alt="Photo de Claes Samantha" itemprop="image">
-            </figure>
-        </div>
-        <div class="rome">
-            <figure>
-                <img src="img/travel_cv.jpg" class="item" srcset="img/travel_cv.jpg" alt="Photo du Colisée à Rome">
-            </figure>
-        </div>
-        <div class="dog">
-            <figure>
-                <img src="img/dog_cv.jpg" class="item" srcset="img/dog_cv.jpg" alt="Photo de mon Cavalier King Charles">
-            </figure>
-        </div>
-    </div>
-    <div>
-        <section class="description" aria-labelledby="name">
-            <h1 class="name_h1" id="me_name" itemprop="name">
-                Claes Samantha
-            </h1>
-            <p class="accroche" itemprop="description">Dynamique, motivée et prête à m’investir. Polyvalente et toujours
-                partante pour relever de nouveaux défis, je suis déterminée à contribuer à vos projets avec sérieux et
-                enthousiasme.</p>
-            <div class="hire_btn">
-                <button class="hire" aria-label="Embauchez-moi">Embauchez moi</button>
+    <div class="img_intro carousel">
+        <div class="carousel-track">
+            <div class="slide me">
+                <figure>
+                    <img src="img/me_cv.jpg" class="item" alt="Photo de Claes Samantha" itemprop="image">
+                </figure>
             </div>
-            <div class="button_description">
-                <div class="button_description_flex" role="tablist" aria-label="Sections du CV">
-                    <button id="button_description" role="tab" aria-selected="true"
-                            aria-controls="description-content">
-                        Description
-                    </button>
-                    <button id="button_formation" role="tab" aria-selected="false"
-                            aria-controls="formation-content">
-                        Formations
-                    </button>
-                    <button id="button_experience" role="tab" aria-selected="false"
-                            aria-controls="experiences-content">
-                        Expériences
-                    </button>
-                </div>
-
-
-                <div class="description_head">
-                    <div class="div_flex_main" id="description-content" role="tabpanel" aria-labelledby="description">
-                        <p id="tiny_text_test" class="tiny_text_js" itemprop="description">
-                            Je m’appelle Samantha, j’ai 25 ans et je suis passionnée par le design et l’esthétique sous
-                            toutes ses formes. Depuis mon plus jeune âge, j’ai toujours été fascinée par la manière dont
-                            les couleurs, les formes et les textures peuvent interagir pour créer des ambiances uniques
-                            et transmettre des émotions.
-                            Curieuse et créative, j’aime explorer de nouvelles tendances, expérimenter différentes
-                            approches artistiques et repousser les limites de mon imagination. J’adore apprendre et
-                            m’inspirer de diverses influences, qu’elles viennent du design graphique, de la mode, de
-                            l’architecture ou même de la nature. Chaque projet est pour moi une opportunité de grandir
-                            et d’enrichir ma vision du monde.
-                        </p>
-                        <div id="modal" class="modal">
-                            <div class="modal-content">
-                                <span id="close-modal-btn" class="close-btn">&times;</span>
-                                <button id="button_description2" role="tab" aria-selected="true"
-                                        aria-controls="description-content">
-                                    Description
-                                </button>
-                                <p class="tiny_text_js" itemprop="description"> Je m’appelle Samantha, j’ai 25 ans et je
-                                    suis
-                                    passionnée par le design et l’esthétique sous toutes ses formes. Depuis mon plus
-                                    jeune âge,
-                                    j’ai
-                                    toujours été fascinée par la manière dont les couleurs, les formes et les textures
-                                    peuvent
-                                    interagir pour créer des ambiances uniques et transmettre des émotions.
-
-                                    Curieuse et créative, j’aime explorer de nouvelles tendances, expérimenter
-                                    différentes
-                                    approches artistiques et repousser les limites de mon imagination. J’adore apprendre
-                                    et
-                                    m’inspirer de diverses influences, qu’elles viennent du design graphique, de la
-                                    mode, de
-                                    l’architecture ou même de la nature. Chaque projet est pour moi une opportunité de
-                                    grandir
-                                    et d’enrichir ma vision du monde.
-                                </p>
-                                <p id="hidden" class="hidden_text">
-                                    Organisée et persévérante, je mets un point d’honneur à mener à bien les missions
-                                    qui me
-                                    sont confiées. J’apprécie le travail en équipe et les échanges qui permettent
-                                    d’affiner une
-                                    idée et de la concrétiser avec précision et professionnalisme. Je cherche à évoluer
-                                    dans un
-                                    environnement stimulant, où je peux allier ma passion pour l’esthétique à une
-                                    approche
-                                    rigoureuse et technique.
-
-                                    Mon objectif est de continuer à développer mes compétences tout en contribuant à des
-                                    projets
-                                    créatifs et ambitieux. Je suis convaincue que le design a le pouvoir de transformer
-                                    notre
-                                    quotidien, d’améliorer notre bien-être et de raconter des histoires qui marquent les
-                                    esprits.
-                                </p>
-                            </div>
-
-                        </div>
-                        <div id="overlay" class="overlay"></div>
-                        <div class="ul_flex" id="formation-content" role="tabpanel" aria-labelledby="formation">
-                            <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
-                                <p hidden id="formation_text" itemprop="name">2012-2019 : CESS en comptabilité et
-                                    gestion à l'Athénée Provincial de
-                                    Flémalle, 2019-2020 : Bac 1 psychologie à l'Université de Liège, 2023-aujourd'hui :
-                                    Techniques Graphiques option design web à la Haute Ecole De La Province De Liège</p>
-                            </div>
-                        </div>
-                        <div class="ul_flex" id="experiences-content" role="tabpanel" aria-labelledby="experiences"
-                        >
-                            <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
-                                <p hidden id="exp_text" itemprop="name">Aout-septembre 2019 : Carrefour de Flémalle,
-                                    Septembre 2022 : Bureau d'expertise CED, Mai à aout 2023 : Bureau d'Avocats
-                                    Delfosse</p>
-                            </div>
-                        </div>
-                        <button id="show_text">Voir plus</button>
-                    </div>
-                </div>
+            <div class="slide rome">
+                <figure>
+                    <img src="img/travel_cv.jpg" class="item" alt="Photo du Colisée à Rome">
+                </figure>
             </div>
-            <div class="ul_link">
-                <ul class="words">
-                    <li><a class="clear_deco" href="" aria-label="Motivée">Motivée</a></li>
-                    <li><a class="clear_deco" href="" aria-label="Ponctuelle">Ponctuelle</a></li>
-                    <li><a class="clear_deco" href="" aria-label="Déterminée">Déterminée</a></li>
-                </ul>
+            <div class="slide dog">
+                <figure>
+                    <img src="img/dog_cv.jpg" class="item" alt="Photo de mon Cavalier King Charles">
+                </figure>
             </div>
-</section>
+        </div>
+        <div class="carousel-nav"></div>
     </div>
 </div>
+<section class="description" aria-labelledby="name">
+    <h1 class="name_h1" id="me_name" itemprop="name">
+        Claes Samantha
+    </h1>
+    <p class="accroche" itemprop="description">Dynamique, motivée et prête à m’investir. Polyvalente et toujours
+        partante pour relever de nouveaux défis, je suis déterminée à contribuer à vos projets avec sérieux et
+        enthousiasme.</p>
+    <div class="hire_btn">
+        <button class="hire" aria-label="Embauchez-moi">Embauchez moi</button>
+    </div>
+    <div>
+        <div class="button_description">
+            <div class="button_description_flex" role="tablist" aria-label="Sections du CV">
+                <button id="button_description" class="buttons" role="tab" aria-selected="true"
+                        aria-controls="description-content">
+                    Description
+                </button>
+                <button id="button_formation" class="buttons" role="tab" aria-selected="false"
+                        aria-controls="formation-content">
+                    Formations
+                </button>
+                <button id="button_experience" class="buttons" role="tab" aria-selected="false"
+                        aria-controls="experiences-content">
+                    Expériences
+                </button>
+            </div>
+
+
+            <div class="description_head">
+                <div class="div_container" id="description-content" role="tabpanel" aria-labelledby="description">
+                    <p id="tiny_text_test" class="tiny_text_js" itemprop="description">
+                        Je m’appelle Samantha, j’ai 25 ans et je suis passionnée par le design et l’esthétique sous
+                        toutes ses formes. Depuis mon plus jeune âge, j’ai toujours été fascinée par la manière dont
+                        les couleurs, les formes et les textures peuvent interagir pour créer des ambiances uniques
+                        et transmettre des émotions.
+                        Curieuse et créative, j’aime explorer de nouvelles tendances, expérimenter différentes
+                        approches artistiques et repousser les limites de mon imagination. J’adore apprendre et
+                        m’inspirer de diverses influences, qu’elles viennent du design graphique, de la mode, de
+                        l’architecture ou même de la nature. Chaque projet est pour moi une opportunité de grandir
+                        et d’enrichir ma vision du monde.
+                    </p>
+                    <div id="modal" class="modal">
+                        <div class="modal-content">
+                            <span id="close-modal-btn" class="close-btn">&times;</span>
+                            <button id="button_description2" role="tab" aria-selected="true"
+                                    aria-controls="description-content">
+                                Description
+                            </button>
+                            <p class="tiny_text_js" itemprop="description"> Je m’appelle Samantha, j’ai 25 ans et je
+                                suis
+                                passionnée par le design et l’esthétique sous toutes ses formes. Depuis mon plus
+                                jeune âge,
+                                j’ai
+                                toujours été fascinée par la manière dont les couleurs, les formes et les textures
+                                peuvent
+                                interagir pour créer des ambiances uniques et transmettre des émotions.
+
+                                Curieuse et créative, j’aime explorer de nouvelles tendances, expérimenter
+                                différentes
+                                approches artistiques et repousser les limites de mon imagination. J’adore apprendre
+                                et
+                                m’inspirer de diverses influences, qu’elles viennent du design graphique, de la
+                                mode, de
+                                l’architecture ou même de la nature. Chaque projet est pour moi une opportunité de
+                                grandir
+                                et d’enrichir ma vision du monde.
+                            </p>
+                            <p id="hidden" class="hidden_text">
+                                Organisée et persévérante, je mets un point d’honneur à mener à bien les missions
+                                qui me
+                                sont confiées. J’apprécie le travail en équipe et les échanges qui permettent
+                                d’affiner une
+                                idée et de la concrétiser avec précision et professionnalisme. Je cherche à évoluer
+                                dans un
+                                environnement stimulant, où je peux allier ma passion pour l’esthétique à une
+                                approche
+                                rigoureuse et technique.
+
+                                Mon objectif est de continuer à développer mes compétences tout en contribuant à des
+                                projets
+                                créatifs et ambitieux. Je suis convaincue que le design a le pouvoir de transformer
+                                notre
+                                quotidien, d’améliorer notre bien-être et de raconter des histoires qui marquent les
+                                esprits.
+                            </p>
+                        </div>
+
+                    </div>
+                    <div id="overlay" class="overlay"></div>
+                    <div class="ul_flex" id="formation-content" role="tabpanel" aria-labelledby="formation">
+                        <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
+                            <p hidden id="formation_text" itemprop="name">2012-2019 : CESS en comptabilité et
+                                gestion à l'Athénée Provincial de
+                                Flémalle, 2019-2020 : Bac 1 psychologie à l'Université de Liège, 2023-aujourd'hui :
+                                Techniques Graphiques option design web à la Haute Ecole De La Province De Liège</p>
+                        </div>
+                    </div>
+                    <div class="ul_flex" id="experiences-content" role="tabpanel" aria-labelledby="experiences"
+                    >
+                        <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
+                            <p hidden id="exp_text" itemprop="name">Aout-septembre 2019 : Carrefour de Flémalle,
+                                Septembre 2022 : Bureau d'expertise CED, Mai à aout 2023 : Bureau d'Avocats
+                                Delfosse</p>
+                        </div>
+                    </div>
+                    <button id="show_text">Voir plus</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 <div class="sct_skills">
     <section aria-labelledby="skills">
@@ -260,8 +258,9 @@
         <span id="follow">Suivez-moi sur :
         <a href="https://www.linkedin.com/in/samantha-claes-ba2242215/" itemprop="url">Linkedin</a>
         <a href="" itemprop="url">Instagram</a></span>
-            <img id="logo_footer" src="./img/logo-cv.svg" alt="Logo de mon CV" width="448" height="26">
             <span id="lang">Choisissez votre pays et votre région et votre langue Belgique (français)</span>
+            <img id="logo_footer" src="./img/logo-cv.svg" alt="Logo de mon CV" width="448" height="26">
+
         </div>
     </div>
 </footer>
