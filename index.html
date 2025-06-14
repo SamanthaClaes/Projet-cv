@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <title>Mon CV - Claes Samantha</title>
     <link rel="stylesheet" href="css/reset.css">
-    <!--    <link rel="stylesheet" href="./css/style.css">-->
     <link rel="stylesheet" href="./css/test.css">
     <script defer src="js/main.js" type="module"></script>
     <meta name="description" content="CV de Claes Samantha, passionnée par le design et l'esthétique.">
 </head>
 <body>
 <header>
+    <div class="text_animation">Faire défiler le texte</div>
     <div class="img_container">
         <figure>
             <img class="logo" src="img/logo-cv.svg" alt="Logo de mon CV" width="105" height="32">
@@ -36,9 +36,11 @@
                 </figure>
             </div>
         </div>
-        <div class="carousel-nav"></div>
+        <div class="carousel-nav">
+        </div>
     </div>
 </div>
+
 <section class="description" aria-labelledby="name">
     <h1 class="name_h1" id="me_name" itemprop="name">
         Claes Samantha
@@ -83,10 +85,6 @@
                     <div id="modal" class="modal">
                         <div class="modal-content">
                             <span id="close-modal-btn" class="close-btn">&times;</span>
-                            <button id="button_description2" role="tab" aria-selected="true"
-                                    aria-controls="description-content">
-                                Description
-                            </button>
                             <p class="tiny_text_js" itemprop="description"> Je m’appelle Samantha, j’ai 25 ans et je
                                 suis
                                 passionnée par le design et l’esthétique sous toutes ses formes. Depuis mon plus
@@ -130,7 +128,7 @@
                     <div id="overlay" class="overlay"></div>
                     <div class="ul_flex" id="formation-content" role="tabpanel" aria-labelledby="formation">
                         <div itemprop="alumniOf" itemscope itemtype="https://schema.org/EducationalOrganization">
-                            <p hidden id="formation_text" itemprop="name">2012-2019 : CESS en comptabilité et
+                            <p hidden id="formation_text" class="tiny_text_js" itemprop="name">2012-2019 : CESS en comptabilité et
                                 gestion à l'Athénée Provincial de
                                 Flémalle, 2019-2020 : Bac 1 psychologie à l'Université de Liège, 2023-aujourd'hui :
                                 Techniques Graphiques option design web à la Haute Ecole De La Province De Liège</p>
@@ -139,7 +137,7 @@
                     <div class="ul_flex" id="experiences-content" role="tabpanel" aria-labelledby="experiences"
                     >
                         <div itemprop="worksFor" itemscope itemtype="https://schema.org/Organization">
-                            <p hidden id="exp_text" itemprop="name">Aout-septembre 2019 : Carrefour de Flémalle,
+                            <p hidden id="exp_text" class="tiny_text_js" itemprop="name">Aout-septembre 2019 : Carrefour de Flémalle,
                                 Septembre 2022 : Bureau d'expertise CED, Mai à aout 2023 : Bureau d'Avocats
                                 Delfosse</p>
                         </div>
@@ -149,120 +147,123 @@
             </div>
         </div>
     </div>
-
-
-<div class="sct_skills">
-    <section aria-labelledby="skills">
-        <h2 class="skills" id="skills">Compétences</h2>
-    </section>
-    <div class="img_flex">
-        <img class="adobe" src="./img/logo_adobe.jpg" alt="Logo de la suite Adobe" itemprop="knowsAbout">
-        <img class="langage" src="./img/logos.jpg"
-             alt="Logo des langages de programmation Html, Css, Javascript et PHP ainsi que le logo du logiciel Figma"
-             itemprop="knowsAbout">
-        <a class="suite_adobe" href="">Suite Adobe</a>
-        <a class="lg_fig" href="">Languages de programattion et logiciel</a>
-        <div class="item1"> Photoshop, illustrator</div>
-        <div class="item2"> HTML, CSS, Javascript, PHP et Figma</div>
-    </div>
-</div>
-
-
-<footer class="change_color" itemscope itemtype="https://schema.org/Person">
-    <ul class="ul_quality">
-        <li class="quality" itemprop="knowsAbout">
-            <a class="link_flex" href="" aria-label="Esprit d'équipe">
-                <span class="team">Esprit d'équipe</span>
-                <span>J'apprécie travailler en équipe</span>
-            </a>
-        </li>
-        <li class="quality" itemprop="knowsAbout">
-            <a class="link_flex" href="" aria-label="Créative">
-                <span class="creative">Créative</span>
-                <span>La créativité est quelque chose d'essentiel</span>
-            </a>
-        </li>
-        <li class="quality" itemprop="knowsAbout">
-            <a class="link_flex" href="" aria-label="Déterminée">
-                <span class="determine">Déterminée</span>
-                <span>Quand je commence un projet je me donne tous les moyens possibles pour le mener jusqu'au bout</span>
-            </a>
-        </li>
-    </ul>
-    <form class="change_color" action="#" method="get" aria-labelledby="contact">
-        <fieldset>
-            <legend class="contact" id="contact">Me contacter</legend>
-            <div>
-                <label class="form_label" for="name">Nom</label>
-                <input type="text" id="name" name="name" placeholder="Ecrivez votre nom ici" aria-required="true">
+    <div class="sct_skills">
+        <section aria-labelledby="skills">
+            <h2 class="skills" id="skills">Compétences</h2>
+        </section>
+        <section class="skills_section">
+            <div class="skill_card">
+                <img src="./img/logo_adobe.jpg" alt="Logo Adobe" class="skill_img">
+                <h3 class="skill_title">Suite Adobe</h3>
+                <p class="skill_desc">Photoshop, Illustrator</p>
+                <a href="#" class="skill_link">En savoir plus</a>
             </div>
-            <div>
-                <label class="form_label" for="surname">Prénom</label>
-                <input type="text" id="surname" name="surname" placeholder="Ecrivez votre prénom ici"
-                       aria-required="true">
+
+            <div class="skill_card">
+                <img src="./img/logos.jpg" alt="Langages et Figma" class="skill_img">
+                <h3 class="skill_title">Langages et Figma</h3>
+                <p class="skill_desc">HTML, CSS, JavaScript, PHP, Figma</p>
+                <a href="#" class="skill_link">En savoir plus</a>
             </div>
-            <div>
-                <label class="form_label" for="email">Email</label>
-                <input type="text" id="email" name="email" placeholder="Ecrivez votre email ici" aria-required="true">
-            </div>
-            <label class="form_label" for="message">Message</label>
-            <textarea name="message" id="message" cols="50" rows="10" aria-labelledby="message-label"
-                      placeholder="Ecrivez-votre message ici"></textarea>
-            <button class="form_btn" type="submit">Confirmer</button>
-        </fieldset>
-    </form>
-    <div class="toggle_bttn">
-        <span>accessibilité : meilleur contraste</span>
-        <input type="checkbox" name="toggle" id="toggle">
-        <label for="toggle" class="checkbox"></label>
-    </div>
-    <div class="container_footer_grid">
-        <div class="footer_grid">
-            <section class="info_perso_flex">
-                <h2>Informations personnelles</h2>
-                <ul class="info">
-                    <li itemprop="email">Samantha.c@outlook.be</li>
-                    <li itemprop="telephone">0496 78 93 03</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Informations complémentaires</h2>
-                <ul class="info">
-                    <li itemprop="birthDate">25 ans</li>
-                    <li itemprop="knowsAbout">Permis B + voiture personnelle</li>
-                    <li itemprop="address">Rue des Cahottes 66, 4400 Flémalle</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Compétences</h2>
-                <ul class="info">
-                    <li itemprop="knowsAbout">Maîtrise des outils de design</li>
-                    <li itemprop="knowsAbout">UI/UX Design</li>
-                    <li itemprop="knowsAbout">Responsive Design</li>
-                </ul>
-            </section>
-            <section>
-                <h2>Valeurs</h2>
-                <ul class="info">
-                    <li itemprop="knowsAbout">Développement personnel</li>
-                    <li itemprop="knowsAbout">Sécurité</li>
-                    <li itemprop="knowsAbout">Défi</li>
-                    <li itemprop="knowsAbout">Carrière</li>
-                    <li itemprop="knowsAbout">Régularité</li>
-                </ul>
-            </section>
+        </section>
+
+
+    <footer class="change_color" itemscope itemtype="https://schema.org/Person">
+        <ul class="ul_quality">
+            <li class="quality" itemprop="knowsAbout">
+                <a class="link_flex" href="" aria-label="Esprit d'équipe">
+                    <span class="team">Esprit d'équipe</span>
+                    <span>J'apprécie travailler en équipe</span>
+                </a>
+            </li>
+            <li class="quality" itemprop="knowsAbout">
+                <a class="link_flex" href="" aria-label="Créative">
+                    <span class="creative">Créative</span>
+                    <span>La créativité est quelque chose d'essentiel</span>
+                </a>
+            </li>
+            <li class="quality" itemprop="knowsAbout">
+                <a class="link_flex" href="" aria-label="Déterminée">
+                    <span class="determine">Déterminée</span>
+                    <span>Quand je commence un projet je me donne tous les moyens possibles pour le mener jusqu'au bout</span>
+                </a>
+            </li>
+        </ul>
+        <form class="change_color" action="#" method="get" aria-labelledby="contact">
+            <fieldset>
+                <legend class="contact" id="contact">Me contacter</legend>
+                <div>
+                    <label class="form_label" for="name">Nom</label>
+                    <input type="text" id="name" name="name" placeholder="Ecrivez votre nom ici" aria-required="true">
+                </div>
+                <div>
+                    <label class="form_label" for="surname">Prénom</label>
+                    <input type="text" id="surname" name="surname" placeholder="Ecrivez votre prénom ici"
+                           aria-required="true">
+                </div>
+                <div>
+                    <label class="form_label" for="email">Email</label>
+                    <input type="text" id="email" name="email" placeholder="Ecrivez votre email ici"
+                           aria-required="true">
+                </div>
+                <label class="form_label" for="message">Message</label>
+                <textarea name="message" id="message" cols="50" rows="10" aria-labelledby="message-label"
+                          placeholder="Ecrivez-votre message ici"></textarea>
+                <button class="form_btn" type="submit">Confirmer</button>
+            </fieldset>
+        </form>
+        <div class="toggle_bttn">
+            <span>accessibilité : meilleur contraste</span>
+            <input type="checkbox" name="toggle" id="toggle">
+            <label for="toggle" class="checkbox"></label>
         </div>
-    </div>
-    <div>
-        <div class="grid_div_footer">
+        <div class="container_footer_grid">
+            <div class="footer_grid">
+                <section class="info_perso_flex">
+                    <h2>Informations personnelles</h2>
+                    <ul class="info">
+                        <li itemprop="email">Samantha.c@outlook.be</li>
+                        <li itemprop="telephone">0496 78 93 03</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Informations complémentaires</h2>
+                    <ul class="info">
+                        <li itemprop="birthDate">25 ans</li>
+                        <li itemprop="knowsAbout">Permis B + voiture personnelle</li>
+                        <li itemprop="address">Rue des Cahottes 66, 4400 Flémalle</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Compétences</h2>
+                    <ul class="info">
+                        <li itemprop="knowsAbout">Maîtrise des outils de design</li>
+                        <li itemprop="knowsAbout">UI/UX Design</li>
+                        <li itemprop="knowsAbout">Responsive Design</li>
+                    </ul>
+                </section>
+                <section>
+                    <h2>Valeurs</h2>
+                    <ul class="info">
+                        <li itemprop="knowsAbout">Développement personnel</li>
+                        <li itemprop="knowsAbout">Sécurité</li>
+                        <li itemprop="knowsAbout">Défi</li>
+                        <li itemprop="knowsAbout">Carrière</li>
+                        <li itemprop="knowsAbout">Régularité</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+        <div>
+            <div class="grid_div_footer">
         <span id="follow">Suivez-moi sur :
         <a href="https://www.linkedin.com/in/samantha-claes-ba2242215/" itemprop="url">Linkedin</a>
         <a href="" itemprop="url">Instagram</a></span>
-            <span id="lang">Choisissez votre pays et votre région et votre langue Belgique (français)</span>
-            <img id="logo_footer" src="./img/logo-cv.svg" alt="Logo de mon CV" width="448" height="26">
+                <span id="lang">Choisissez votre pays et votre région et votre langue Belgique (français)</span>
+                <img id="logo_footer" src="./img/logo-cv.svg" alt="Logo de mon CV" width="448" height="26">
 
+            </div>
         </div>
-    </div>
-</footer>
+    </footer>
 </body>
 </html>

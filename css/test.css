@@ -30,7 +30,7 @@ body {
     margin-bottom: 40px;
 }
 
-.hire {
+.hire, .form_btn {
     font-family: "Roboto Light", sans-serif;
     border: none;
     background: rgb(51, 56, 60);
@@ -43,7 +43,7 @@ body {
 .button_description_flex {
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid lightgrey;
 }
 
 .buttons {
@@ -65,13 +65,13 @@ body {
 }
 
 .img_intro {
-    width: 100%;
-    max-width: 495px;
-    height: 535px;
-    margin: auto;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
     position: relative;
     overflow: hidden;
 }
+
 
 .carousel-track {
     display: flex;
@@ -81,21 +81,34 @@ body {
 }
 
 .slide {
-    flex: 0 0 100%; /* ← crucial pour 1 image à la fois */
+    flex: 0 0 100vw; /* ← crucial pour 1 image à la fois */
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    height: 100vh;
+}
+
+.carousel-track .slide{
+    width: 100%;
 }
 
 .item {
     max-width: 100%;
     max-height: 100%;
     display: block;
+    object-fit: cover;
+}
+.encapsuled {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
 
+
 .div_container {
-    border-bottom: 1px solid red;
+    border-bottom: 1px solid lightgrey;
 }
 
 .sct_skills {
@@ -112,10 +125,11 @@ body {
 /* Points de navigation */
 .carousel-nav {
     position: absolute;
-    bottom: 10px;
-    left: 10px;
+    bottom: 250px;
+    left: 4px;
     display: flex;
-    gap: 5px;
+    gap: 10px;
+    z-index: 10;
 }
 
 .carousel-nav button {
@@ -130,6 +144,9 @@ body {
 
 .carousel-nav button.active {
     opacity: 1;
+    width: 8px;
+    height: 8px;
+    background: black;
 }
 
 .change_color {
@@ -145,14 +162,12 @@ footer {
 
 }
 
-
 .container_footer_grid {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    margin-bottom: 48px;
 }
 
 
@@ -162,7 +177,6 @@ footer {
     justify-content: space-between;
     gap: 40px;
     width: 100%;
-    max-width: 1200px;
     padding: 20px;
 
 }
@@ -262,6 +276,172 @@ span.determine, span.team, span.creative{
     text-align: left;
     margin-bottom: 4px;
 }
+
+.text_animation{
+    background: black;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+.tiny_text_js{
+    padding: 16px;
+}
+
+h2{
+    font-weight: bold;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 300px;
+    height: 100%;
+    background-color: white;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000;
+}
+.modal-content {
+    padding: 20px;
+    position: relative;
+    max-height: 100vh;
+    overflow-y: auto;
+
+}
+.hidden{
+    display: none;
+}
+
+.modal-content-section {
+    display: none;
+}
+
+.modal-content-section.hidden {
+    display: none;
+}
+
+.modal-content-section:not(.hidden) {
+    display: block;
+}
+
+ .close-btn {
+     position: absolute;
+     top: 10px;
+     right: 10px;
+     font-size: 20px;
+     cursor: pointer;
+ }
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+}
+.checkbox {
+    display: inline-block;
+    width: 50px;
+    height: 25px;
+    background-color: lightgrey;
+    position: relative;
+    transition: all 1s;
+    border-radius: 60px;
+    cursor: pointer;
+}
+
+.checkbox:after {
+    content: "";
+    height: 15px;
+    width: 15px;
+    background-color: white;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    transition: all 1s;
+    border-radius: 50%;
+}
+.toggle_bttn {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    gap: 10px;
+}
+
+#toggle {
+    display: none;
+}
+
+
+#toggle:checked + .checkbox:after {
+    transform: translateX(24px);
+}
+#toggle:checked + .checkbox {
+    background: #33383c;
+}
+
+.skills_section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    padding: 40px;
+}
+
+.skill_card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+.skill_card:hover {
+    transform: translateY(-4px);
+}
+
+.skill_img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: contain;
+    margin-bottom: 16px;
+}
+
+.skill_title {
+    font-family: Didot, serif;
+    font-size: 18px;
+    margin-bottom: 8px;
+}
+
+.skill_desc {
+    font-family: "Roboto Light", sans-serif;
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.skill_link {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 8px;
+    background-color: #33383c;
+    color: white;
+    font-size: 14px;
+    text-decoration: none;
+    font-family: "Roboto Light", sans-serif;
+}
+
+.skill_link:hover {
+    background-color: #555;
+}
+
+
 
 
 /*
